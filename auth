@@ -1,0 +1,66 @@
+#!/bin/ash
+
+USERNAME="aahigh"
+
+echo "=== Git Security Setup (with smart cleanup) ==="
+echo ""
+echo "Enter your GitHub Personal Access Token (input will be hidden):"
+read -s TOKEN
+echo ""
+
+if [ -z "$TOKEN" ]; then
+  echo "✗ No token provided. Exiting."
+  exit 1
+fi
+
+echo "Cleaning up existing config..."
+echo ""
+
+# 1. Remove ALL url rewrite rules (any pattern matching insteadOf with github)
+echo "1. Removing all old URL rewrite rules..."
+git config --global --remove-section url 2>/dev/null || true
+echo "   ✓ All URL rewrite rules removed"
+echo ""
+
+# 2. Remove ALL safe.directory entries, will add back only wildcard
+echo "2. Removing all safe.directory entries..."
+git config --global --unset-all safe.directory 2>/dev/null || true
+echo "   ✓ All safe.directory entries removed"
+echo ""
+
+# 3. Set credential helper
+echo "3. Configuring credential helper..."
+git config --global credential.helper store
+echo "   ✓ credential.helper = store"
+echo ""
+
+# 4. Set single clean URL rewrite rule with new token
+echo "4. Configuring URL rewrite rule..."
+git config --global url."https://$USERNAME:$TOKEN@github.com/".insteadOf "https://github.com/"
+echo "   ✓ URL rewrite configured"
+echo ""
+
+# 5. Set safe.directory to wildcard only
+echo "5. Setting safe.directory..."
+git config --global --add safe.directory '*'
+echo "   ✓ safe.directory = *"
+echo ""
+
+# 6. Verify clean state
+echo "6. Verifying final state..."
+echo ""
+echo "   safe.directory entries:"
+git config --global --get-all safe.directory
+echo ""
+echo "   URL rewrite rules:"
+git config --global --list | grep insteadOf
+echo ""
+echo "   All global config:"
+git config --global --list
+echo ""
+
+echo "=== Setup complete ==="
+echo ""
+echo "You can now clone and push without password prompts:"
+echo "  git clone https://github.com/$USERNAME/REPONAME.git"
+
