@@ -1,3 +1,5 @@
 #!/bin/ash
 cp -f _bashrc $HOME/.bashrc
 cp -f _alias $HOME/.alias
+cp -f _complete $HOME/.complete
+cp -f _tcshrc $HOME/.tcshrc

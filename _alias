@@ -1,0 +1,3 @@
+#!/bin/tcsh
+alias ls ls-F -C
+alias sa source $HOME/.alias
