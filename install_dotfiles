@@ -1,0 +1,3 @@
+#!/bin/ash
+cp -f _bashrc $HOME/.bashrc
+cp -f _alias $HOME/.alias
