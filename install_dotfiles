@@ -1,5 +1,16 @@
-#!/bin/ash
-cp -f _bashrc $HOME/.bashrc
-cp -f _alias $HOME/.alias
-cp -f _complete $HOME/.complete
-cp -f _tcshrc $HOME/.tcshrc
+#!/bin/tcsh
+# this will only install dotfiles if you do not already have them,
+# and if you do, then it will simply tell you that it won't
+# overwrite what you have there....
+#
+if( ! -f $HOME/.bashrc ) then
+    cp -f _bashrc $HOME/.bashrc
+else
+    echo "already have a .bashrc in your home directory!"
+endif
+
+if( ! -f $HOME/.tcshrc ) then
+    cp -f _tcshrc $HOME/.tcshrc
+else
+    echo "already have a .tcshrc in your home directory!"
+endif
