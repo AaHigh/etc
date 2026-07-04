@@ -8,4 +8,4 @@ if( -f $HOME/.complete ) then
 endif
 
 
-set prompt="%~%# "
+set prompt="%{\033[1;33;44m%}%~%{\033[0;37m%}%# "
