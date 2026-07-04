@@ -6,3 +6,6 @@ endif
 if( -f $HOME/.complete ) then
     source $HOME/.complete
 endif
+
+
+set prompt="%~%# "
