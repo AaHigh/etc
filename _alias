@@ -1,3 +1,4 @@
 #!/bin/tcsh
 alias ls ls-F -C
-alias sa source $HOME/.alias
+alias sa source $HOME/etc/_alias
+alias va vi $HOME/etc/_alias
