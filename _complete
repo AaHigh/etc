@@ -1,0 +1,5 @@
+#/bin/tcsh
+# auto completion is awesome this is just a placeholder
+# but the intent is to provide the same autocomplete environment
+# that I have used since the early 90's on Silicon Graphics
+# UNIX workstations using the tcsh environment with color-ls
