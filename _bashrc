@@ -1,13 +1,1 @@
 alias t='exec /bin/tcsh'
-rap"
-
-# Auto-launch into the Silicon Graphics TCSH workspace safely
-if [[ $- == *i* ]]; then
-    if command -v tcsh >/dev/null 2>&1; then
-        exec tcsh
-    else
-        echo "Warning: tcsh not found in PATH — staying in bash" >&2
-    fi
-fi
-
-echo hlel
