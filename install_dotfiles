@@ -3,10 +3,10 @@
 # and if you do, then it will simply tell you that it won't
 # overwrite what you have there....
 #
-if( ! -f $HOME/.bashrc ) then
-    cp -f _bashrc $HOME/.bashrc
+if( ! -f $HOME/.profile ) then
+    cp -f _bashrc $HOME/.profile
 else
-    echo "already have a .bashrc in your home directory!"
+    echo "already have a .profile in your home directory!"
 endif
 
 if( ! -f $HOME/.tcshrc ) then
