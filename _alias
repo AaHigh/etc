@@ -6,4 +6,6 @@ alias sto cd $HOME/stories
 alias let cd $HOME/letters
 alias etc cd $HOME/etc
 alias push 'git push'
+alias pu   'git push'
 alias pull 'git pull'
+alias com  'git commit -m "\!:*"'
