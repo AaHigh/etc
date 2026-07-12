@@ -5,7 +5,15 @@ alias cell cd $HOME/CELLTOWER
 alias sto cd $HOME/stories
 alias let cd $HOME/letters
 alias etc cd $HOME/etc
+
+# aliases to make using git on my iPhone easier
 alias push 'git push'
 alias pu   'git push'
 alias pull 'git pull'
-alias com  'git commit -m "\!:*"'
+alias ga   'git add'
+#
+# alias, "com" ... format to use:
+### root:~# com this is a commit message no quotes
+# this is to make it easier to commit with
+#  messages when using a cellphone with no kybd
+alias com  'git commit -m "iSH \!:*" ; git push'
