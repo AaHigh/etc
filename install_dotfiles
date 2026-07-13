@@ -9,6 +9,12 @@ else
     echo "already have a .profile in your home directory!"
 endif
 
+if( ! -f $HOME/.vimrc ) then
+    cp -f _vimrc $HOME/.vimrc
+else
+    echo "already have a .vimrc in your home directory!"
+endif
+
 if( ! -f $HOME/.tcshrc ) then
     cp -f _tcshrc $HOME/.tcshrc
 else
