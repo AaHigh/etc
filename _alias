@@ -2,6 +2,7 @@
 alias sa source $HOME/etc/_alias
 alias va vi $HOME/etc/_alias
 alias cell cd $HOME/CELLTOWER
+alias aa   cd $HOME/aahigh
 alias snap cd $HOME/SNAPSHOTS
 alias sto cd $HOME/stories
 alias let cd $HOME/letters
