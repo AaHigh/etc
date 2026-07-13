@@ -1,2 +1,2 @@
 set hlsearch
-highlight Search guibg=Yellow guifg=Black
+highlight Search ctermfg=0 ctermbg=11 guibg=Yellow guifg=Black
