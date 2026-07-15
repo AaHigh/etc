@@ -7,12 +7,21 @@ alias snap cd $HOME/SNAPSHOTS
 alias sto cd $HOME/stories
 alias let cd $HOME/letters
 alias etc cd $HOME/etc
+alias l   'ls'
+alias ll  'ls -l '
+alias .   'cd ..'
+alias ..  'cd ..'
+alias -   'cd -'
 
 # aliases to make using git on my iPhone easier
-alias push 'git push'
-alias pu   'git push'
-alias pull 'git pull'
-alias ga   'git add'
+alias hard  'git reset --hard HEAD'
+alias clean 'git clean -nd'
+alias cleaf 'git clean -fd'
+alias st    'git status'
+alias push  'git push'
+alias pu    'git push'
+alias pull  'git pull'
+alias ga    'git add'
 #
 # alias, "com" ... format to use:
 ### root:~# com this is a commit message no quotes
