@@ -4,6 +4,7 @@ alias va vi $HOME/etc/_alias
 alias cell cd $HOME/CELLTOWER
 alias nach cd $HOME/nachos
 alias fall cd $HOME/fallacy
+alias tv   cd $HOME/tv
 alias mp3  cd $HOME/mp3
 alias aa   cd $HOME/aahigh
 alias snap cd $HOME/SNAPSHOTS
