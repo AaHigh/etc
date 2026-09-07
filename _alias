@@ -10,6 +10,7 @@ alias aa   cd $HOME/aahigh
 alias snap cd $HOME/SNAPSHOTS
 alias sto cd $HOME/stories
 alias ser cd $HOME/sermon
+alias ser cd $HOME/sermon
 alias let cd $HOME/letters
 alias etc cd $HOME/etc
 alias l   'ls'
