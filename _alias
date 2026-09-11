@@ -30,6 +30,7 @@ alias pu    'git push'
 alias pull  'git pull'
 alias ga    'git add'
 alias up    'git pull --rebase origin main'
+alias https 'git remote set-url origin `git remote get-url origin | sed -e "s|^http://|https://|" -e "s|github.com/aahigh|github.com/AaHigh|"` ; git remote -v'
 #
 # alias, "com" ... format to use:
 ### root:~# com this is a commit message no quotes
