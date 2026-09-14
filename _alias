@@ -37,3 +37,6 @@ alias https 'git remote set-url origin `git remote get-url origin | sed -e "s|^h
 # this is to make it easier to commit with
 #  messages when using a cellphone with no kybd
 alias com  'git commit -m "iSH \!:*" ; git push'
+
+# YouTube Download command (I don't like typing the dash)
+alias ytdlp yt-dlp
