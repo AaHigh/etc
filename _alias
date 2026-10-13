@@ -7,6 +7,7 @@ alias fall cd $HOME/fallacy
 alias tv   cd $HOME/tv
 alias mp3  cd $HOME/mp3
 alias aa   cd $HOME/aahigh
+alias linc cd $HOME/lincoln
 alias snap cd $HOME/SNAPSHOTS
 alias sto cd $HOME/stories
 alias kar cd $HOME/karaoke
