@@ -9,6 +9,7 @@ alias mp3  cd $HOME/mp3
 alias aa   cd $HOME/aahigh
 alias linc cd $HOME/lincoln
 alias snap cd $HOME/SNAPSHOTS
+alias dis cd $HOME/district
 alias piz cd $HOME/pizza
 alias sto cd $HOME/stories
 alias kar cd $HOME/karaoke
