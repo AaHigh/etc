@@ -6,6 +6,7 @@ alias nach cd $HOME/nachos
 alias fall cd $HOME/fallacy
 alias tv   cd $HOME/tv
 alias mp3  cd $HOME/mp3
+alias fil  cd $HOME/film
 alias aa   cd $HOME/aahigh
 alias linc cd $HOME/lincoln
 alias snap cd $HOME/SNAPSHOTS
