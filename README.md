@@ -52,3 +52,17 @@ Buddy (Muse) is the assistant now. The old README described a collaboration with
 ## Install
 
 Run `./install_dotfiles` from this repo. It only installs files you don't already have. It installs once — it will not replace a file that is already there. If one is outdated, delete it first, then run the installer again.
+
+## Native iOS Home Directory (Required for Optimal Use)
+
+iSH’s internal filesystem is slow, limited, and can be wiped on updates or restarts.  
+For real work we mount a native iOS folder as the root account’s home directory.
+
+### One-time setup
+
+1. In the Files app create a folder under **On My iPhone** named `iSH-root` (or any name you like).
+2. Move or clone all your working repos into that folder.
+3. Inside iSH run:
+
+```sh
+mount -t ios . /root
