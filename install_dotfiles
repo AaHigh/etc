@@ -20,3 +20,16 @@ if( ! -f $HOME/.tcshrc ) then
 else
     echo "already have a .tcshrc in your home directory!"
 endif
+
+if( ! -f /bin/t ) then
+    cp -f t /bin/t
+    echo "installed the /bin/t to exec tcsh with a single letter cmd"
+else
+    echo "already have a /bin/t (if same size it's prob fine.)"
+    echo "here are the two files' details"
+    ls -ld ./t /bin/t
+endif
+
+echo "NOTE: replacement does not happen automatically.
+echo "      rm -f <filename> for any file that appears outdated"
+echo "      this script is really only intended to run once"
