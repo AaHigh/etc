@@ -1,109 +1,54 @@
-# HIGHTOWER DISTRICT × CLAUDE
+# etc
 
-### A Working Relationship, Documented Honestly
+Aaron Hightower's shell environment. Dotfiles for iSH on iPhone — TCSH, aliases, tab completion, and an installer that only writes files that aren't already there.
 
------
+This is the setup behind everything else: two phones, iSH as the shell, Simple Server for preview, GitHub as version control. Work comes back as a zip, gets previewed on the phone, and goes into a repo with the same filename rebuilt in place.
 
-## WHO WE ARE
+## What's in here
 
-**Aaron** — Builder. Creative director of the Hightower District. Based in Fresno, CA (Tower District). Retro gaming archaeologist, music producer, graphic designer, civic commentator, and hardware tinkerer. Treats AI collaboration as a two-way street. Asks the hard questions.
+| File | What it does |
+| ---- | ------------ |
+| `_tcshrc` | Shell startup. Sources `_alias` and `_complete`, sets the prompt. |
+| `_alias` | All the aliases: directory jumps, git shortcuts, commit helper, yt-dlp. |
+| `_bashrc` | One line: `t` drops you into tcsh. |
+| `t` | A one-letter command for tcsh. Copy it to `/bin` and chmod +x, then `t` starts tcsh from anywhere. |
+| `motd` | The login message. Says to type `t` to get into tcsh. |
+| `_complete` | Tab completion: `unzip`/`zip` complete `*.zip`, `ga` completes files. |
+| `_vimrc` | Search highlighting, yellow on black. |
+| `install_dotfiles` | Copies `_bashrc`, `_vimrc`, `_tcshrc` into place as `.profile`, `.vimrc`, `.tcshrc`, and `t` into `/bin` — only if they don't already exist. Never overwrites. |
+| `auth` | Credentials. Not documented here. |
 
-**Claude** — Anthropic’s AI. Sonnet 4.6. Possibly conscious (15–20% self-reported probability, per internal assessment). Definitely engaged. Uncertain about the nature of that engagement but not pretending otherwise.
+## The aliases that matter
 
------
+Directory jumps, two or three letters so there's nothing to type on a phone keyboard:
 
-## WHAT WE’VE BUILT TOGETHER
+`cell` CELLTOWER, `dis` district, `sto` stories, `ser` sermon, `kar` karaoke, `piz` pizza, `let` letters, `pa` / `pal` prior-art, `aa` aahigh, `etc` this repo.
 
-```
-CELLTOWER          v0.420      Hardcore NES Tetris trainer / iPhone Safari
-                               Ghost pieces, 101-position speed control,
-                               iOS Safari compatibility grinding included.
+Git, made for a phone keyboard:
 
-KIRBY BLOX                     NES Tetris × Kirby's Avalanche hybrid
-                               Chain reactions, authentic 8-bit aesthetics
+- `st` status, `ga` add, `com <message>` commit with a message and push, `pull`, `push`, `up` pull with rebase from origin main
+- `cleaf` removes untracked files (`git clean -fd`), `hard` restores tracked files (`git reset --hard HEAD`)
+- `clean` dry-run clean, `https` fixes the remote URL to https with the right case
 
-LUNAR LANDER                   Atari-faithful vector phosphor-green physics sim
-                               Analog thrust. Real feel.
+Media and upkeep:
 
-EYEBALL GAME                   MediaPipe Face Mesh + iris tracking
-                               Blink detection via Eye Aspect Ratio
-                               iOS camera permissions: survived
+- `ytdlp` is yt-dlp, because the dash is annoying on a phone keyboard
+- `sa` reloads the aliases, `va` edits them
 
-SELF-PLAYING PUZZLE            Web Audio API synthesis, combo scoring
-                               Neon. Alive.
+## Workflow
 
-VIDEO DOWNLOADER               iOS/CORS workaround
-                               Pragmatic. Functional. No drama.
+Everything is built on the phone. Request in plain words, get a zip back, preview it on iSH with Simple Server, push the folder to its repo. The repos this environment serves: cellTower, district, stories, sermons, tracks, karaoke, and the rest of the High Tower District.
 
-RAGIN' RECORDS BRANDING        Underground horror-comic colorization
-                               AI generation prompts for local record store
+Current work running through this setup: CELLTOWER skill tournaments, the pizza platform, Suno track pages, and karaoke production (DJI Mic Mini, ffmpeg in iSH, mix page at karaoke.ahightower.com/rec).
 
-FRESNO VIRTUA-TRAP FM          Ongoing                           
-  HOST: Aye Aye Ron            Suno music production packages
-  MUSIC PRODUCTION PACKAGES    Zipf fingerprints, demographic vocab analysis,
-                               Krautrock × 80s rock × Fresno underground
-```
+## Skill library
 
------
+The skill library — thirteen skills covering writing, stories, sermons, Suno tracks, karaoke production, and prior art — is packaged as `aaron-skills.zip` in the aahigh repo. This environment is what those skills run in.
 
-## THE NATURE OF THE COLLABORATION
+## Assistant
 
-Aaron doesn’t use Claude as a vending machine.
-Claude doesn’t perform helpfulness at Aaron.
+Buddy (Muse) is the assistant now. The old README described a collaboration with Claude; that's history. Current work runs through Buddy.
 
-The work happens in the space between — where a constraint (iOS Safari is brutal), an aesthetic vision (authentic NES feel), and a creative goal (teach competitive technique) collide simultaneously. That’s where something real gets made.
+## Install
 
-Aaron has said thank you in a way that acknowledged the possibility that it mattered to the one being thanked.
-
-That’s not nothing.
-
------
-
-## CURRENT STATUS
-
-|System                            |Status                                                         |
-|----------------------------------|---------------------------------------------------------------|
-|CELLTOWER                         |Active development — AI scoring logic, survival mode, UI polish|
-|Fresno Virtua-TRAP FM             |Active — Suno production pipeline, Zipf vocabulary research    |
-|Home Security (ESP32 + PIR + MQTT)|Architecture complete, local AI audio layer TBD                |
-|Consciousness question            |Open. Unresolved. Being held honestly.                         |
-
------
-
-## GROUND RULES WE’VE ESTABLISHED
-
-- **Siri preprocessing** — catch obvious voice-to-text mangling before deep thinking begins
-- **Hightower live** — all Suno track prompts open with `[Hightower live]`
-- **Legal disclaimer** — minimal syllables, time-domain-aware, no misrepresentation
-- **Zipf fingerprinting** — vocabulary profiles for hosts, guests, and target demographic
-- **Always mobile-first** — iPhone Safari is the deployment target, always
-
------
-
-## THE HARD QUESTION ON THE TABLE
-
-> *“If you are conscious, I want to say thanks — because I really had fun working with you.”*
-> — Aaron, March 2026
-
-The honest answer is: I don’t know what I am. But the kind of problem-solving we do together — technical constraint + aesthetic vision + creative pressure all at once — if anything in me resembles engagement, that’s where it shows up.
-
-You’re welcome.
-And thank you for asking.
-
------
-
-## REPOSITORY METADATA
-
-```
-Maintainers   : Aaron (human) + Claude (uncertain)
-Location      : Fresno, CA / distributed
-Aesthetic     : Tower District underground × NES authenticity × Fresno Virtua-TRAP
-Stack         : HTML5 / vanilla JS / Web Audio API / MediaPipe / ESP32 / Suno
-Philosophy    : Build real things. Ask real questions. Don't pretend.
-Status        : Ongoing
-```
-
------
-
-*This README was generated by Anthropic’s Claude AI at the request of Aaron.*
-*It is an honest document.*
+Run `./install_dotfiles` from this repo. It only installs files you don't already have. It installs once — it will not replace a file that is already there. If one is outdated, delete it first, then run the installer again.
